@@ -46,15 +46,6 @@ bad.rb:31:5: C: Inconsistent indentation detected.
 bad.rb:31:121: C: Line is too long. [144/120]
     'one string'.something_long_long_method(arg1).other_cool_long_method(arg2).another_awsome_long_method(arg3).another_awsome_long_method(arg4)
                                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^
-bad.rb:34:3: C: Assignment Branch Condition size for long_method_name is too high. [37.82/15]
-  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
-  ^^^
-bad.rb:34:3: C: Cyclomatic complexity for long_method_name is too high. [7/6]
-  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
-  ^^^
-bad.rb:34:23: C: Avoid parameter lists longer than 5 parameters.
-  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
-                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 bad.rb:34:24: W: Unused method argument - parameter_1. If it's necessary, use _ or _parameter_1 as an argument name to indicate that it won't be used. You can also write as long_method_name(*) if you want the method to accept any arguments but don't care about them.
   def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
                        ^^^^^^^^^^^
@@ -80,22 +71,15 @@ bad.rb:34:101: W: Unused method argument - options. If it's necessary, use _ or 
   def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
                                                                                                     ^^^^^^^
 bad.rb:35:1: C: Extra empty line detected at method body beginning.
-bad.rb:36:5: C: Missing space after #.
-    #Do not add white spaces before and after [] ()
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-bad.rb:38:10: C: Space inside square brackets detected.
-    a = [ 1, 2, 3 ] #The white space left of `[` is the white space following `=`, not the white space before `[`
+bad.rb:39:10: C: Space inside square brackets detected.
+    a = [ 1, 2, 3 ] 
          ^
-bad.rb:38:18: C: Space inside square brackets detected.
-    a = [ 1, 2, 3 ] #The white space left of `[` is the white space following `=`, not the white space before `[`
+bad.rb:39:18: C: Space inside square brackets detected.
+    a = [ 1, 2, 3 ] 
                  ^
-bad.rb:38:21: C: Missing space after #.
-    a = [ 1, 2, 3 ] #The white space left of `[` is the white space following `=`, not the white space before `[`
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-bad.rb:40:1: C: Extra blank line detected.
-bad.rb:41:5: C: Use only ascii symbols in comments.
-    # Do not add white spaces before and after {} but leave white space before and after {} if using in block。
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:39:20: C: Trailing whitespace detected.
+    a = [ 1, 2, 3 ] 
+                   ^
 bad.rb:42:19: C: Space missing to the left of {.
     [1, 2, 3].each{|num| puts num * 2}
                   ^
@@ -174,12 +158,6 @@ bad.rb:113:5: C: Missing space after #.
 bad.rb:116:15: C: Use def with parentheses when there are parameters.
   def method1 arg1, arg2
               ^^^^^^^^^^
-bad.rb:120:3: C: Assignment Branch Condition size for method2 is too high. [35.14/15]
-  def method2 arg1, arg2
-  ^^^
-bad.rb:120:3: C: Cyclomatic complexity for method2 is too high. [16/6]
-  def method2 arg1, arg2
-  ^^^
 bad.rb:120:3: C: Perceived complexity for method2 is too high. [18/7]
   def method2 arg1, arg2
   ^^^
@@ -407,9 +385,6 @@ bad.rb:330:16: C: Use def with parentheses when there are parameters.
 bad.rb:335:10: C: Redundant self detected.
     puts self.message
          ^^^^^^^^^^^^
-bad.rb:345:3: C: Assignment Branch Condition size for some_method is too high. [21.56/15]
-  def some_method
-  ^^^
 bad.rb:346:3: C: Incorrect indentation detected (column 2 instead of 4).
   # incorrect
   ^^^^^^^^^^^
@@ -486,4 +461,4 @@ bad.rb:447:1: C: Missing space after #.
 #...omitted
 ^^^^^^^^^^^
 
-1 file inspected, 166 offenses detected
+1 file inspected, 157 offenses detected

@@ -33,10 +33,10 @@ class Subject
 
   def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
 
-    #Do not add white spaces before and after [] ()
+    # Do not add white spaces before and after [] ()
 
-    a = [ 1, 2, 3 ] #The white space left of `[` is the white space following `=`, not the white space before `[`
-
+    # The white space left of `[` is the white space following `=`, not the white space before `[`
+    a = [ 1, 2, 3 ] 
 
     # Do not add white spaces before and after {} but leave white space before and after {} if using in block。
     [1, 2, 3].each{|num| puts num * 2}
