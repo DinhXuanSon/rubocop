@@ -1,0 +1,489 @@
+Inspecting 1 file
+W
+
+Offenses:
+
+bad.rb:14:1: C: Class has too many lines. [101/100]
+class Subject
+^^^^^
+bad.rb:15:1: C: Extra empty line detected at class body beginning.
+bad.rb:18:3: C: Use 2 (not 0) spaces for indentation.
+  sum = 1
+  
+bad.rb:19:5: C: Incorrect indentation detected (column 4 instead of 3).
+    # Do not use tab
+    ^^^^^^^^^^^^^^^^
+bad.rb:20:3: C: Tab detected.
+  	a, b = 1, 2
+  ^
+bad.rb:20:4: C: Inconsistent indentation detected.
+  	a, b = 1, 2
+   ^^^^^^^^^^^
+bad.rb:20:4: C: Do not use parallel assignment.
+  	a, b = 1, 2
+   ^^^^^^^^^^^
+bad.rb:22:5: C: Inconsistent indentation detected.
+    a = 2 
+    ^^^^^
+bad.rb:22:10: C: Trailing whitespace detected.
+    a = 2 
+         ^
+bad.rb:25:5: C: Inconsistent indentation detected.
+    1 > 2 ? true : false ;puts 'Hi'
+    ^^^^^^^^^^^^^^^^^^^^
+bad.rb:25:25: C: Space found before semicolon.
+    1 > 2 ? true : false ;puts 'Hi'
+                        ^
+bad.rb:25:26: C: Do not use semicolons to terminate expressions.
+    1 > 2 ? true : false ;puts 'Hi'
+                         ^
+bad.rb:25:26: C: Space missing after semicolon.
+    1 > 2 ? true : false ;puts 'Hi'
+                         ^
+bad.rb:31:5: C: Inconsistent indentation detected.
+    'one string'.something_long_long_method(arg1).other_cool_long_method(arg2).another_awsome_long_method(arg3).another_awsome_long_method(arg4)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:31:121: C: Line is too long. [144/120]
+    'one string'.something_long_long_method(arg1).other_cool_long_method(arg2).another_awsome_long_method(arg3).another_awsome_long_method(arg4)
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:34:3: C: Assignment Branch Condition size for long_method_name is too high. [37.82/15]
+  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
+  ^^^
+bad.rb:34:3: C: Cyclomatic complexity for long_method_name is too high. [7/6]
+  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
+  ^^^
+bad.rb:34:23: C: Avoid parameter lists longer than 5 parameters.
+  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:34:24: W: Unused method argument - parameter_1. If it's necessary, use _ or _parameter_1 as an argument name to indicate that it won't be used. You can also write as long_method_name(*) if you want the method to accept any arguments but don't care about them.
+  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
+                       ^^^^^^^^^^^
+bad.rb:34:37: W: Unused method argument - parameter_2. If it's necessary, use _ or _parameter_2 as an argument name to indicate that it won't be used. You can also write as long_method_name(*) if you want the method to accept any arguments but don't care about them.
+  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
+                                    ^^^^^^^^^^^
+bad.rb:34:50: W: Unused method argument - parameter_3. If it's necessary, use _ or _parameter_3 as an argument name to indicate that it won't be used. You can also write as long_method_name(*) if you want the method to accept any arguments but don't care about them.
+  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
+                                                 ^^^^^^^^^^^
+bad.rb:34:63: W: Unused method argument - parameter_4. If it's necessary, use _ or _parameter_4 as an argument name to indicate that it won't be used. You can also write as long_method_name(*) if you want the method to accept any arguments but don't care about them.
+  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
+                                                              ^^^^^^^^^^^
+bad.rb:34:74: C: Space missing after comma.
+  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
+                                                                         ^
+bad.rb:34:75: W: Unused method argument - parameter_5. If it's necessary, use _ or _parameter_5 as an argument name to indicate that it won't be used. You can also write as long_method_name(*) if you want the method to accept any arguments but don't care about them.
+  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
+                                                                          ^^^^^^^^^^^
+bad.rb:34:88: W: Unused method argument - parameter_6. If it's necessary, use _ or _parameter_6 as an argument name to indicate that it won't be used. You can also write as long_method_name(*) if you want the method to accept any arguments but don't care about them.
+  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
+                                                                                       ^^^^^^^^^^^
+bad.rb:34:101: W: Unused method argument - options. If it's necessary, use _ or _options as an argument name to indicate that it won't be used. You can also write as long_method_name(*) if you want the method to accept any arguments but don't care about them.
+  def long_method_name(parameter_1, parameter_2, parameter_3, parameter_4,parameter_5, parameter_6, options)
+                                                                                                    ^^^^^^^
+bad.rb:35:1: C: Extra empty line detected at method body beginning.
+bad.rb:36:5: C: Missing space after #.
+    #Do not add white spaces before and after [] ()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:38:10: C: Space inside square brackets detected.
+    a = [ 1, 2, 3 ] #The white space left of `[` is the white space following `=`, not the white space before `[`
+         ^
+bad.rb:38:18: C: Space inside square brackets detected.
+    a = [ 1, 2, 3 ] #The white space left of `[` is the white space following `=`, not the white space before `[`
+                 ^
+bad.rb:38:21: C: Missing space after #.
+    a = [ 1, 2, 3 ] #The white space left of `[` is the white space following `=`, not the white space before `[`
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:40:1: C: Extra blank line detected.
+bad.rb:41:5: C: Use only ascii symbols in comments.
+    # Do not add white spaces before and after {} but leave white space before and after {} if using in block。
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:42:19: C: Space missing to the left of {.
+    [1, 2, 3].each{|num| puts num * 2}
+                  ^
+bad.rb:42:19: C: Space between { and | missing.
+    [1, 2, 3].each{|num| puts num * 2}
+                  ^^
+bad.rb:42:38: C: Space missing inside }.
+    [1, 2, 3].each{|num| puts num * 2}
+                                     ^
+bad.rb:43:5: W: Literal { key1: :value1, key2: :value2 } used in void context.
+    { key1: :value1, key2: :value2 }
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:43:6: C: Space inside { detected.
+    { key1: :value1, key2: :value2 }
+     ^
+bad.rb:43:35: C: Space inside } detected.
+    { key1: :value1, key2: :value2 }
+                                  ^
+bad.rb:45:121: C: Line is too long. [137/120]
+    # Use here document for long string with line breaks. However, we can use literal string when define a short message or method chain.
+                                                                                                                        ^^^^^^^^^^^^^^^^^
+bad.rb:47:121: C: Line is too long. [185/120]
+    foo = "From this valley they say you are going,\nWe will miss your bright eyes and sweet smile,\nFor they say you are taking the sunshine\nThat has brightened our pathways a while."
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:51:21: C: Space after closing | missing.
+    arr.each { |elem|puts elem }
+                    ^
+bad.rb:55:10: C: Use the new Ruby 1.9 hash syntax.
+    h = {:key => :value}
+         ^^^^^^^
+bad.rb:58:10: C: Space inside { detected.
+    h = { key: :value }
+         ^
+bad.rb:58:22: C: Space inside } detected.
+    h = { key: :value }
+                     ^
+bad.rb:68:5: C: Missing space after #.
+    #this is a bad comment
+    ^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:72:5: C: Incorrect indentation detected (column 4 instead of 0).
+    # Do not write anything in line comment out =begin
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:74:1: C: Do not use block comments.
+=begin # bad style
+^^^^^^^^^^^^^^^^^^
+bad.rb:90:7: C: Indent when as deep as case.
+      when song.name == 'Misty'
+      ^^^^
+bad.rb:92:7: C: Indent when as deep as case.
+      when song.duration > 120
+      ^^^^
+bad.rb:94:7: C: Indent when as deep as case.
+      when Time.now.hour > 21
+      ^^^^
+bad.rb:98:7: W: end at 98, 6 is not aligned with case at 89, 4.
+      end
+      ^^^
+bad.rb:100:5: C: Missing space after #.
+    #Howerver, if left side of case has anything, indentation of when lines will be inside compare with case.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:103:5: C: Indent when as deep as case.
+    when song.name == 'Misty'
+    ^^^^
+bad.rb:105:5: C: Indent when as deep as case.
+    when song.duration > 120
+    ^^^^
+bad.rb:107:5: C: Indent when as deep as case.
+    when Time.now.hour > 21
+    ^^^^
+bad.rb:111:5: W: end at 111, 4 is not aligned with case at 102, 10.
+    end
+    ^^^
+bad.rb:113:5: C: Missing space after #.
+    #Add 1 white space after def
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:116:15: C: Use def with parentheses when there are parameters.
+  def method1 arg1, arg2
+              ^^^^^^^^^^
+bad.rb:120:3: C: Assignment Branch Condition size for method2 is too high. [35.14/15]
+  def method2 arg1, arg2
+  ^^^
+bad.rb:120:3: C: Cyclomatic complexity for method2 is too high. [16/6]
+  def method2 arg1, arg2
+  ^^^
+bad.rb:120:3: C: Perceived complexity for method2 is too high. [18/7]
+  def method2 arg1, arg2
+  ^^^
+bad.rb:120:15: C: Use def with parentheses when there are parameters.
+  def method2 arg1, arg2
+              ^^^^^^^^^^
+bad.rb:127:5: C: Redundant self detected.
+    self.method1(arg1, arg2)
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:129:5: C: Missing space after #.
+    #Do not use for
+    ^^^^^^^^^^^^^^^
+bad.rb:134:5: C: Prefer each over for.
+    for elem in arr do
+    ^^^
+bad.rb:137:1: C: Trailing whitespace detected.
+bad.rb:141:23: C: Do not use then for multi-line if.
+    if some_condition then
+                      ^^^^
+bad.rb:145:121: C: Line is too long. [129/120]
+    # When using ternary operator / conditional operator ( ? : ), all should be written on the same line. Do not use if then else
+                                                                                                                        ^^^^^^^^^
+bad.rb:148:15: C: Avoid multi-line ?: (the ternary operator); use if/unless instead.
+    weather = sun.shin? ?
+              ^^^^^^^^^^^
+bad.rb:154:15: C: Favor the ternary operator (?:) over if/then/else/end constructs.
+    weather = if sun.shiny? then 'well' else 'cloud' end # you must also not use 'then' keyword.
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:158:23: C: Ternary operators must not be nested. Prefer if/else constructs instead.
+    some_condition ? (nested_condition ? nested_something : nested_something_else) : something_else
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:161:10: W: Comparison of something with itself detected.
+    if 1 == 1 and true
+         ^^
+bad.rb:161:15: C: Use && instead of and.
+    if 1 == 1 and true
+              ^^^
+bad.rb:161:19: W: Literal true appeared in a condition.
+    if 1 == 1 and true
+                  ^^^^
+bad.rb:165:15: C: Use || instead of or.
+    if a == b or false
+              ^^
+bad.rb:165:18: W: Literal false appeared in a condition.
+    if a == b or false
+                 ^^^^^
+bad.rb:167:8: C: Trailing whitespace detected.
+    end 
+       ^
+bad.rb:172:5: C: Favor modifier if usage when having a single-line body. Another good alternative is the usage of control flow &&/||.
+    if some_condition
+    ^^
+bad.rb:176:121: C: Line is too long. [129/120]
+    foo = "This is a very very long string that can not be broken down and may contain #{variable}" unless some_another_condition
+                                                                                                                        ^^^^^^^^^
+bad.rb:178:5: C: Missing space after #.
+    #Do not use unless with else
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:180:5: C: Do not use unless with else. Rewrite these with the positive case first.
+    unless success?
+    ^^^^^^^^^^^^^^^
+bad.rb:186:5: C: Missing space after #.
+    #Do not use ! in if conditional clause (if necessary use unless). However we can still use ! with && or ||. In these cases we can use De Morgan's rules to write simpler.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:186:121: C: Line is too long. [173/120]
+    #Do not use ! in if conditional clause (if necessary use unless). However we can still use ! with && or ||. In these cases we can use De Morgan's rules to write simpler.
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:189:5: C: Favor modifier if usage when having a single-line body. Another good alternative is the usage of control flow &&/||.
+    if !user.nil?
+    ^^
+bad.rb:189:5: C: Favor unless over if for negative conditions.
+    if !user.nil?
+    ^^^^^^^^^^^^^
+bad.rb:193:5: C: Missing space after #.
+    #Do not use () in conditional clause of if/unless/while
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:195:8: C: Don't use parentheses around the condition of an if.
+    if (x > 10)
+       ^^^^^^^^
+bad.rb:199:5: C: Missing space after #.
+    #If there is a code block, use {} and write in 1 line. In case there are many commands, use do ~ end This rule also applies to method chain.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:199:121: C: Line is too long. [144/120]
+    #If there is a code block, use {} and write in 1 line. In case there are many commands, use do ~ end This rule also applies to method chain.
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:201:13: C: Use %w or %W for array of words.
+    names = ['Bozhidar', 'Steve', 'Sarah']
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:209:3: C: Use empty lines between method definitions.
+  def some_method(some_arr)
+  ^^^
+bad.rb:210:5: C: Redundant return detected.
+    return some_arr.size
+    ^^^^^^
+bad.rb:213:5: C: Incorrect indentation detected (column 4 instead of 2).
+    #If there is assignment inside conditional clause of if, use ()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:213:5: C: Missing space after #.
+    #If there is assignment inside conditional clause of if, use ()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:216:10: W: Assignment in condition - you probably meant to use ==.
+    if v = array.grep(/foo/) 
+         ^
+bad.rb:216:29: C: Trailing whitespace detected.
+    if v = array.grep(/foo/) 
+                            ^
+bad.rb:225:3: C: Incorrect indentation detected (column 2 instead of 4).
+  # incorrect - will set enabled to be true even when it is false
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:228:5: C: Missing space after #.
+    #There is no white spaces between method name and arguments
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:231:5: C: Redundant self detected.
+    self.f (3 + 2) + 1
+    ^^^^^^^^^^^^^^^^^^
+bad.rb:231:11: W: (...) interpreted as grouped expression.
+    self.f (3 + 2) + 1
+          ^
+bad.rb:236:29: W: Shadowing outer local variable - v.
+    result = hash.map { |_, v| v + 1 }
+                            ^
+bad.rb:241:19: C: Pass &:maintain! as an argument to each instead of a block.
+    products.each { |product| product.maintain! }
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:244:19: C: Pass &:maintain! as an argument to each instead of a block.
+    products.each { |prod| prod.maintain! }
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:256:121: C: Line is too long. [182/120]
+  #     Destroy method or dangerous method should add ! at the end, such as Array#flatten! When define destroy method, un-destroy method like Array#flatten should be defined as well.
+                                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:260:3: C: Incorrect indentation detected (column 2 instead of 4).
+  #     Avoid using class variables @@ unless it is really necessary
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:264:1: C: Missing top-level class documentation comment.
+class Parent 
+^^^^^
+bad.rb:264:13: C: Trailing whitespace detected.
+class Parent 
+            ^
+bad.rb:265:3: C: Replace class var @@class_var with a class instance var.
+  @@class_var = 'parent'
+  ^^^^^^^^^^^
+bad.rb:272:1: C: Missing top-level class documentation comment.
+class Child < Parent
+^^^^^
+bad.rb:273:3: C: Replace class var @@class_var with a class instance var.
+  @@class_var = 'child'
+  ^^^^^^^^^^^
+bad.rb:276:1: C: Extra blank line detected.
+bad.rb:277:5: C: Incorrect indentation detected (column 4 instead of 0).
+    # Check if class instance variable can be accessed
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:279:1: C: Missing top-level class documentation comment.
+class Parent 
+^^^^^
+bad.rb:279:13: C: Trailing whitespace detected.
+class Parent 
+            ^
+bad.rb:287:1: C: Missing top-level class documentation comment.
+class Child < Parent
+^^^^^
+bad.rb:291:1: C: Extra blank line detected.
+bad.rb:292:5: C: Incorrect indentation detected (column 4 instead of 0).
+    # When define singleton method (class method), do not use def self.method or def ClassName.method
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:294:1: C: Missing top-level class documentation comment.
+class TestClass 
+^^^^^
+bad.rb:294:16: C: Trailing whitespace detected.
+class TestClass 
+               ^
+bad.rb:296:7: C: Use self.some_method instead of TestClass.some_method.
+  def TestClass.some_method
+      ^^^^^^^^^
+bad.rb:306:11: C: Do not put a space between a method name and the opening parenthesis.
+def method ( a ,b ,c ) 
+          ^
+bad.rb:306:13: C: Space inside parentheses detected.
+def method ( a ,b ,c ) 
+            ^
+bad.rb:306:15: C: Space found before comma.
+def method ( a ,b ,c ) 
+              ^
+bad.rb:306:16: C: Space missing after comma.
+def method ( a ,b ,c ) 
+               ^
+bad.rb:306:18: C: Space found before comma.
+def method ( a ,b ,c ) 
+                 ^
+bad.rb:306:19: C: Space missing after comma.
+def method ( a ,b ,c ) 
+                  ^
+bad.rb:306:21: C: Space inside parentheses detected.
+def method ( a ,b ,c ) 
+                    ^
+bad.rb:306:23: C: Trailing whitespace detected.
+def method ( a ,b ,c ) 
+                      ^
+bad.rb:309:1: C: Missing top-level class documentation comment.
+class SomeClass 
+^^^^^
+bad.rb:309:16: C: Trailing whitespace detected.
+class SomeClass 
+               ^
+bad.rb:310:1: C: Extra empty line detected at class body beginning.
+bad.rb:311:3: C: Keep a blank line before and after private.
+  private
+  ^^^^^^^
+bad.rb:316:3: C: Keep a blank line before and after protected.
+  protected
+  ^^^^^^^^^
+bad.rb:324:1: C: Extra empty line detected at class body end.
+bad.rb:327:1: C: Missing top-level class documentation comment.
+class SomeClass2 
+^^^^^
+bad.rb:327:17: C: Trailing whitespace detected.
+class SomeClass2 
+                ^
+bad.rb:330:7: C: Do not prefix writer method names with set_.
+  def set_name name
+      ^^^^^^^^
+bad.rb:330:16: C: Use def with parentheses when there are parameters.
+  def set_name name
+               ^^^^
+bad.rb:335:10: C: Redundant self detected.
+    puts self.message
+         ^^^^^^^^^^^^
+bad.rb:345:3: C: Assignment Branch Condition size for some_method is too high. [21.56/15]
+  def some_method
+  ^^^
+bad.rb:346:3: C: Incorrect indentation detected (column 2 instead of 4).
+  # incorrect
+  ^^^^^^^^^^^
+bad.rb:358:5: W: Do not suppress exceptions.
+    rescue
+    ^^^^^^
+bad.rb:365:5: W: Do not suppress exceptions.
+    rescue Exception
+    ^^^^^^^^^^^^^^^^
+bad.rb:365:5: W: Avoid rescuing the Exception class. Perhaps you meant to rescue StandardError?
+    rescue Exception
+    ^^^^^^^^^^^^^^^^
+bad.rb:383:3: C: Incorrect indentation detected (column 2 instead of 4).
+  # incorrect
+  ^^^^^^^^^^^
+bad.rb:386:5: C: Incorrect indentation detected (column 4 instead of 2).
+    # * When need to add more into string, do not use ``` String#+ ``` method, use ``` String#<< ``` method
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:388:3: C: Incorrect indentation detected (column 2 instead of 4).
+  # correct
+  ^^^^^^^^^
+bad.rb:390:10: W: Operator + used in void context.
+    html + '<h1>Page title</h1>'
+         ^
+bad.rb:397:13: C: Avoid the use of Perl-style backrefs.
+    process $1
+            ^^
+bad.rb:403:5: C: Missing space after #.
+    #Use x when writing a complex regular expression. However, all empty characters will be ignored.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:405:14: C: Use // around regular expression.
+    regexp = %r{
+             ^^^
+bad.rb:415:35: C: Trailing whitespace detected.
+    # Use %() when need to display 
+                                  ^
+bad.rb:421:5: W: Literal %r(\s+) used in void context.
+    %r(\s+)
+    ^^^^^^^
+bad.rb:421:5: C: %r-literals should be delimited by { and }.
+    %r(\s+)
+    ^^^^^^^
+bad.rb:421:5: C: Use // around regular expression.
+    %r(\s+)
+    ^^^^^^^
+bad.rb:423:5: W: Literal %r(^/(.*)$) used in void context.
+    %r(^/(.*)$)
+    ^^^^^^^^^^^
+bad.rb:423:5: C: %r-literals should be delimited by { and }.
+    %r(^/(.*)$)
+    ^^^^^^^^^^^
+bad.rb:427:3: C: Incorrect indentation detected (column 2 instead of 4).
+  #     When need to compare between a variable and a value like a number or a constant, write variable on the right side
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+bad.rb:427:121: C: Line is too long. [121/120]
+  #     When need to compare between a variable and a value like a number or a constant, write variable on the right side
+                                                                                                                        ^
+bad.rb:431:3: C: Incorrect indentation detected (column 2 instead of 4).
+  # bad
+  ^^^^^
+bad.rb:438:3: C: Missing top-level module documentation comment.
+  module ClassMethods
+  ^^^^^^
+bad.rb:439:25: C: Use def with parentheses when there are parameters.
+    def attr_comparable *attrs
+                        ^^^^^^
+bad.rb:439:26: W: Unused method argument - attrs. If it's necessary, use _ or _attrs as an argument name to indicate that it won't be used. You can also write as attr_comparable(*) if you want the method to accept any arguments but don't care about them.
+    def attr_comparable *attrs
+                         ^^^^^
+bad.rb:447:1: C: Incorrect indentation detected (column 0 instead of 2).
+#...omitted
+^^^^^^^^^^^
+bad.rb:447:1: C: Missing space after #.
+#...omitted
+^^^^^^^^^^^
+
+1 file inspected, 166 offenses detected
