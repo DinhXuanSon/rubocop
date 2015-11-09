@@ -5,10 +5,6 @@ Style/AccessModifierIndentation:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#indent-public-private-protected'
   Enabled: true
 
-Style/AccessorMethodName:
-  Description: Check the naming of accessor methods for get_/set_.
-  Enabled: true
-
 Style/Alias:
   Description: 'Use alias_method instead of alias.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#alias-method'
@@ -163,13 +159,6 @@ Style/DeprecatedHashMethods:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#hash-key'
   Enabled: true
 
-Style/Documentation:
-  Description: 'Document classes and non-namespace modules.'
-  Enabled: true
-  Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
-
 Style/DotPosition:
   Description: 'Checks the position of the dot in multi-line method calls.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#consistent-multi-line-chains'
@@ -199,10 +188,6 @@ Style/EmptyLineBetweenDefs:
 
 Style/EmptyLines:
   Description: "Don't use several empty lines in a row."
-  Enabled: true
-
-Style/EmptyLinesAroundAccessModifier:
-  Description: "Keep blank lines around access modifiers."
   Enabled: true
 
 Style/EmptyLinesAroundBlockBody:
@@ -354,13 +339,6 @@ Style/MethodCallParentheses:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-args-no-parens'
   Enabled: true
 
-Style/MethodDefParentheses:
-  Description: >-
-                 Checks if the method definitions have or don't have
-                 parentheses.
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#method-parens'
-  Enabled: true
-
 Style/MethodName:
   Description: 'Use the configured style when naming methods.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#snake-case-symbols-methods-vars'
@@ -369,11 +347,6 @@ Style/MethodName:
 Style/ModuleFunction:
   Description: 'Checks for usage of `extend self` in modules.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#module-function'
-  Enabled: true
-
-Style/MultilineBlockChain:
-  Description: 'Avoid multi-line chains of blocks.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#single-line-blocks'
   Enabled: true
 
 Style/MultilineBlockLayout:
@@ -480,11 +453,6 @@ Style/ParenthesesAroundCondition:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-parens-if'
   Enabled: true
 
-Style/PercentLiteralDelimiters:
-  Description: 'Use `%`-literal delimiters consistently'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#percent-literal-braces'
-  Enabled: true
-
 Style/PercentQLiterals:
   Description: 'Checks if uses of %Q/%q match the configured preference.'
   Enabled: true
@@ -528,16 +496,6 @@ Style/RedundantReturn:
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-explicit-return'
   Enabled: true
 
-Style/RedundantSelf:
-  Description: "Don't use self where it's not needed."
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-self-unless-required'
-  Enabled: true
-
-Style/RegexpLiteral:
-  Description: 'Use / or %r around regular expressions.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#percent-r'
-  Enabled: true
-
 Style/RescueEnsureAlignment:
   Description: 'Align rescues and ensures correctly.'
   Enabled: true
@@ -562,11 +520,6 @@ Style/Semicolon:
 Style/SignalException:
   Description: 'Checks for proper usage of fail and raise.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#fail-method'
-  Enabled: true
-
-Style/SingleLineBlockParams:
-  Description: 'Enforces the names of some block params.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#reduce-blocks'
   Enabled: true
 
 Style/SingleLineMethods:
@@ -692,11 +645,6 @@ Style/SpecialGlobalVars:
 Style/StabbyLambdaParentheses:
   Description: 'Check for the usage of parentheses around stabby lambda arguments.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#stabby-lambda-with-args'
-  Enabled: true
-
-Style/StringLiterals:
-  Description: 'Checks if uses of quotes match the configured preference.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#consistent-string-literals'
   Enabled: true
 
 Style/StringLiteralsInInterpolation:
@@ -919,11 +867,6 @@ Lint/FormatParameterMismatch:
   Description: 'The number of parameters to format/sprint must match the fields.'
   Enabled: true
 
-Lint/HandleExceptions:
-  Description: "Don't suppress exception."
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#dont-hide-exceptions'
-  Enabled: true
-
 Lint/InvalidCharacterLiteral:
   Description: >-
                  Checks for invalid character literals with a non-escaped
@@ -1000,16 +943,6 @@ Lint/UnneededDisable:
                  It must be explicitly disabled.
   Enabled: true
 
-Lint/UnusedBlockArgument:
-  Description: 'Checks for unused block arguments.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#underscore-unused-vars'
-  Enabled: true
-
-Lint/UnusedMethodArgument:
-  Description: 'Checks for unused method arguments.'
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#underscore-unused-vars'
-  Enabled: true
-
 Lint/UnreachableCode:
   Description: 'Unreachable code.'
   Enabled: true
@@ -1028,10 +961,6 @@ Lint/UselessElseWithoutRescue:
 
 Lint/UselessSetterCall:
   Description: 'Checks for useless setter call to a local variable.'
-  Enabled: true
-
-Lint/Void:
-  Description: 'Possible use of operator/literal/variable in void context.'
   Enabled: true
 
 ##################### Performance #############################
