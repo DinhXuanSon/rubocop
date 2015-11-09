@@ -103,3 +103,86 @@ Lint/UselessAssignment:
   Description: 'Checks for useless assignment to a local variable.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#underscore-unused-vars'
   Enabled: false
+
+Style/SingleLineBlockParams:
+  Description: 'Enforces the names of some block params.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#reduce-blocks'
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Description: 'Avoid multi-line chains of blocks.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#single-line-blocks'
+  Enabled: false
+
+Style/StringLiterals:
+  Description: 'Checks if uses of quotes match the configured preference.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#consistent-string-literals'
+  Enabled: false
+
+Lint/ShadowingOuterLocalVariable:
+  Description: >-
+                 Do not use the same name as outer local variable
+                 for block arguments or block local variables.
+  Enabled: false
+
+Lint/UnusedBlockArgument:
+  Description: 'Checks for unused block arguments.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#underscore-unused-vars'
+  Enabled: false
+
+Lint/Void:
+  Description: 'Possible use of operator/literal/variable in void context.'
+  Enabled: false
+
+Style/Documentation:
+  Description: 'Document classes and non-namespace modules.'
+  Enabled: false
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+
+Style/EmptyLinesAroundAccessModifier:
+  Description: "Keep blank lines around access modifiers."
+  Enabled: false
+
+Style/RedundantSelf:
+  Description: "Don't use self where it's not needed."
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-self-unless-required'
+  Enabled: false
+
+Style/MethodDefParentheses:
+  Description: >-
+                 Checks if the method definitions have or don't have
+                 parentheses.
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#method-parens'
+  Enabled: false
+
+
+Style/AccessorMethodName:
+  Description: Check the naming of accessor methods for get_/set_.
+  Enabled: false
+
+Lint/HandleExceptions:
+  Description: "Don't suppress exception."
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#dont-hide-exceptions'
+  Enabled: false
+
+Lint/UnusedMethodArgument:
+  Description: 'Checks for unused method arguments.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#underscore-unused-vars'
+  Enabled: false
+
+Style/AsciiComments:
+  Description: 'Use only ascii symbols in comments.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#english-comments'
+  Enabled: false
+
+Style/RegexpLiteral:
+  Description: 'Use / or %r around regular expressions.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#percent-r'
+  Enabled: false
+
+Style/PercentLiteralDelimiters:
+  Description: 'Use `%`-literal delimiters consistently'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#percent-literal-braces'
+  Enabled: false
